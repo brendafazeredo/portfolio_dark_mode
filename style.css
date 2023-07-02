@@ -1,0 +1,257 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    transition: .25s;
+    background: #000000;
+    color: rgb(255, 255, 255);
+  }
+  
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 650px;
+    max-width: 650px;
+    width: calc(100% - 100px);
+    height: 400px;
+  }
+  
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    border: 0px solid #ffffff;
+    background: var(--optionBackground, var(--defaultBackground, #525252));
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .box1.active,
+  .box2.active,
+  .box3.active,
+  .box4.active,
+  .box5.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 10px;
+    border-radius: 40px;
+    background-size: auto 100%;
+    box-shadow:inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;  
+  }
+  
+  .box1.active.shadow,
+  .box2.active.shadow,
+  .box3.active.shadow,
+  .box4.active.shadow,
+  .box5.active.shadow {
+    box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+  }
+  
+  .box1.active .label,
+  .box2.active .label,
+  .box3.active .label,
+  .box4.active .label,
+  .box5.active .label {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .box1.active .label .info > div,
+  .box2.active .label .info > div,
+  .box3.active .label .info > div,
+  .box4.active .label .info > div,
+  .box5.active .label .info > div {
+    left: 0px;
+    opacity: 1;
+  }
+  
+  .box1:not(.active),
+  .box2:not(.active),
+  .box3:not(.active),
+  .box4:not(.active),
+  .box5:not(.active) {
+    flex-grow: 1;
+    border-radius: 30px;
+  }
+  
+  .box1:not(.active) .shadow,
+  .box2:not(.active) .shadow,
+  .box3:not(.active) .shadow,
+  .box4:not(.active) .shadow, 
+  .box5:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+  }
+  
+  .box1:not(.active) .label,
+  .box2:not(.active) .label,
+  .box3:not(.active) .label,
+  .box4:not(.active) .label,
+  .box5:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .box1:not(.active) .label .info > div,
+  .box2:not(.active) .label .info > div,
+  .box3:not(.active) .label .info > div,
+  .box4:not(.active) .label .info > div,
+  .box5:not(.active) .label .info > div {
+    left: 20px;
+    opacity: 0;
+  }
+  
+  .box1 .shadow,
+  .box2 .shadow,
+  .box3 .shadow,
+  .box4 .shadow,
+  .box5 .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+  
+  .box1 .label,
+  .box2 .label,
+  .box3 .label,
+  .box4 .label, 
+  .box5 .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  }
+  
+  .box1 .label .icon,
+  .box2 .label .icon, 
+  .box3 .label .icon,
+  .box4 .label .icon,
+  .box5 .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .box1 .label .info,
+  .box2 .label .info, 
+  .box3 .label .info,
+  .box4 .label .info,
+  .box5 .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: #ffff;
+    font-size: 11px;
+    white-space: pre;
+  }
+  
+  .box1 .label .info > div,
+  .box2 .label .info > div, 
+  .box3 .label .info > div,
+  .box4 .label .info > div,
+  .box5 .label .info > div {
+    position: relative;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+  }
+  
+  .box1 .label .info .main,
+  .box2 .label .info .main,
+  .box3 .label .info .main, 
+  .box4 .label .info .main,
+  .box5 .label .info .main {
+    font-size: 11px;
+  }
+  
+  .box1 .label .info .sub,
+  .box2 .label .info .sub, 
+  .box3 .label .info .sub,
+  .box4 .label .info .sub,
+  .box5 .label .info .sub {
+    transition-delay: .1s;
+  }
+  
+  .box1 {
+    background-image: url('https://lh3.googleusercontent.com/pw/AJFCJaUqQBtEWnEluv5BmOEhtISFtpI0jIa59UofzcaWX07--L9Up0NW-Tt23oB8oWLTHHDTIu1no_SCAjD0ZQtqsKWHGC5EkfPvnrBUB4M6Yq0Q672BQmupzh41y6IXF8PupR8q91h6B-UYLX6mdOkIesc3=w1380-h1696-s-no?authuser=0');
+  }
+  
+  .box2 {
+    background-image: url('https://lh3.googleusercontent.com/pw/AJFCJaWINtQ1Pq7YNu3yg2SjwAq6JfFoMgvq9iY2ENV2Y5rYr2Nud1qJxq1JwCvirkZf6a5tf1EWoOIztFHx-Hk_OIF_0K7lbjif4JQ6j4ZQh7zto5_wB0zun6lHOG3lU8qHnCAy5enrG5vlS_wyq4Ha5hGU=w1504-h1696-s-no?authuser=0');
+  }
+  
+  .box3 {
+    background-image: url('https://lh3.googleusercontent.com/pw/AJFCJaUz-wgsTZIBykYizkkOUd6AveAb9QLSR-ybY1-HahBPGpEn_L7-_U56jMtNBkQ3L81CUGNzHToWUzoZPEu45cA1T_qVC88o1ONZ2UgMjkO5f2aEjfuECJZQMjpnItbxA90MEdRreM1SIuzssP-L0Tfo=w1524-h1696-s-no?authuser=0');
+  }
+  
+  .box4 {
+    background-image: url('https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  }
+  
+  .box5 {
+    background-image: url('https://lh3.googleusercontent.com/pw/AJFCJaWj0XhIRVseuh7DM9bgy9L_FLemhlXKeuiLoUi9Ksj6UaWFqxxofm5bQjFGRAaUoG5xt-9jAZJLmsRr5JgQyuTnB_jUiRVVT5d6Q8Z5Uy0Baa-VEsS1lwCnBUh74hWJRHVWKmr2s4KTpyEmEH7bH4T-=w1530-h1696-s-no?authuser=0');
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .social-icons a {
+    margin: 7px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    background: #fffdfd;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 20px 20px; 
+  }
