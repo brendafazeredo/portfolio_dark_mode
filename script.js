@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function downloadPDF() {
-    var fileUrl = "https://drive.google.com/file/d/1m30oWFTsWlZ0JRvfsdwr7XJNT0egaTCd/view?usp=sharing";
+    var fileUrl = "https://drive.google.com/file/d/1L5V5RZ1ZEYrdAB2eyVxpfk_X-kh-Pgw_/view?usp=sharing";
 
     var link = document.createElement("a");
 
