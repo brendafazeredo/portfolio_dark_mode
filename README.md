@@ -1,2 +1,2 @@
 <h1>Portfolio - Dark mode</h1>
-Hello! My name is Brenda Azeredo, I am 23 years old and I speak four languages fluently. I am a Data Science student and I am also attending some bootcamps focused on back-end development. I am excited to find the ideal role in an innovative project related to Python, Django and Flask development and data science/ analytics with tools like MongoDB and SQL.
+Hello! I am Brenda Azeredo, a 23-year-old polyglot. Currently honing my skills in Full stack and mobile development, I am eager to contribute to exciting projects. Proficient in JavaScript, TypeScript, Next.js, React.js, React Native, Redux, TailwindCSS and databases such as Firebase and PostgreSQL, I want to build something extraordinary!
